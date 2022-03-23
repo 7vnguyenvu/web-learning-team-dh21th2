@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 .title {
     transform: translateX(35%);
     color: rgb(0, 84, 32);
