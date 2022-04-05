@@ -1,10 +1,55 @@
 * {
     padding: 0;
+    margin: 0;
     border: 0;
     box-sizing: border-box;
 }
 
-.title {
-    transform: translateX(35%);
-    color: rgb(0, 84, 32);
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ---------------------------container------------------------------ */
+.body__container {
+    max-width: 1600px;
+    padding: 0 40px;
+    background-color: #ccc;
+}
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+#header {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+/* -----------------------------Taskbar-------------------------- */
+.taskbar__list {
+    display: flex;
+}
+.taskbar__content {
+    padding: 0 12px
+}
+/* -------------------------------Other--------------------------- */
+
+.other__list {
+    display: flex;
+}
+.other__icon {
+    padding: 0 12px
 }
