@@ -14,20 +14,24 @@ ul {
 
 a {
     text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: black;
 }
 
 /* ---------------------------container------------------------------ */
 .body__container {
     max-width: 1600px;
     padding: 0 40px;
-    background-color: #ccc;
+    /* background-color: #ccc; */
 }
 
 
 
 
 
-/* ---------------------------------------------------------------- */
+/* ----------------------------Header------------------------------ */
 #header {
     width: 100%;
     min-height: 70px;
@@ -35,7 +39,18 @@ a {
     align-items: center;
     justify-content: space-between;
     font-family: 'Quicksand', sans-serif;
+    color: black;
+    background-color: white;
 }
+
+/* ---------------------------- logo------------------------------ */
+
+.logo {
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 600;
+
+}   
 
 
 /* -----------------------------Taskbar-------------------------- */
@@ -45,7 +60,15 @@ a {
 .taskbar__content {
     padding: 0 12px
 }
+.taskbar__content i {
+    font-size: 10px;
+}
+
+
 /* -------------------------------Other--------------------------- */
+
+
+
 
 .other__list {
     display: flex;
@@ -53,3 +76,33 @@ a {
 .other__icon {
     padding: 0 12px
 }
+
+.other__cart {
+    position: relative;
+    
+}
+
+.other__cart-count {
+    font-size: 6px;
+    width: 10px;
+    height: 10px;
+    background-color: #f1c150;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 8px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 10px;
+    color: white;
+}
+
+
+
+
+/* ----------------------------Body------------------------------ */
+
+.body__carousel {
+    margin: 0 -40px;
+}
+

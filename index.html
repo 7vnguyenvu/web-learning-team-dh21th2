@@ -8,7 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@450&display=swap" rel="stylesheet">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="fontcss/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -75,9 +79,16 @@
 
             <div class="other">
                 <ul class="other__list">
-                    <li class="other__icon other__search"><i class="fa-solid fa-magnifying-glass"></i></li>
-                    <li class="other__icon other__user"><i class="fa-solid fa-user"></i></li>
-                    <li class="other__icon other__cart"><i class="fa-solid fa-cart-shopping"></i></li>
+                    <li class="other__icon other__search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </li>
+                    <li class="other__icon other__user">
+                        <i class="fa-solid fa-user"></i>
+                    </li>
+                    <li class="other__icon other__cart">
+                        <i class="fa-solid fa-cart-shopping other__cart-icon"></i>
+                        <div class="other__cart-count">0</div>
+                    </li>
                 </ul>
 
             </div>
@@ -85,6 +96,91 @@
         </div>
 
         <div id="body" class="body">
+            
+
+
+            <div class="body__carousel">
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://theme.hstatic.net/200000427867/1000834996/14/slide_3_img.jpg?v=1062" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://theme.hstatic.net/200000427867/1000834996/14/slide_1_img.jpg?v=1062" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://theme.hstatic.net/200000427867/1000834996/14/slide_2_img.jpg?v=1062" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>  
+            </div>
+
+            <div class="body__components">
+                <h4 class="body__components-title">
+                    Danh mục nổi bật
+                </h4>
+                _________
+            </div>
+            <div class="body__components">
+                <h4 class="body__components-title">
+                    Tác phẩm nổi bật
+                </h4>
+                _________
+            </div>
+            <div class="body__components">
+                <h4 class="body__components-title">
+                    Sách kinh doanh
+                </h4>
+                _________
+            </div>
+            <div class="body__components">
+                <h4 class="body__components-title">
+                    Khuyến mãi hôm nay
+                </h4>
+                _________
+            </div>
+            <div class="body__components">
+                <h4 class="body__components-title">
+                    Bài viết mới nhất
+                </h4>
+                _________
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
         </div>
 
