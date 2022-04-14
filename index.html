@@ -35,10 +35,12 @@
                             <li><a href="" class="taskbar__title-elmt">Kiểu hiển thị header 2</a></li>
                             <li><a href="" class="taskbar__title-elmt">Kiểu hiển thị header 3</a></li>
                         </ul> -->
+                        <div class="line"></div>   
                     </li>
 
                     <li class="taskbar__content">
                         <a class="taskbar__title" href="">Sản phẩm</a>
+                        <div class="line"></div>   
                     </li>
 
                     <li class="taskbar__content">
@@ -49,10 +51,12 @@
                             <li><a href="" class="taskbar__title-elmt">Kiểu hiển thị 2</a></li>
                             <li><a href="" class="taskbar__title-elmt">Kiểu hiển thị 3</a></li>
                         </ul> -->
+                        <div class="line"></div>   
                     </li>
                     
                     <li class="taskbar__content">
                         <a class="taskbar__title" href="">Blog</a>
+                        <div class="line"></div>   
                     </li>
                     
                     <li class="taskbar__content">
@@ -63,31 +67,41 @@
                             <li><a href="" class="taskbar__title-elmt">Kiểu hiển thị 2</a></li>
                             <li><a href="" class="taskbar__title-elmt">Kiểu hiển thị 3</a></li>
                         </ul> -->
+                        <div class="line"></div>   
                     </li>
 
                     <li class="taskbar__content">
                         <a class="taskbar__title" href="">Liên hệ</a>
+                        <div class="line"></div>   
                     </li>
                     
                     <li class="taskbar__content">
                         <a class="taskbar__title" href="">Langding Page</a>
+                        <div class="line"></div>   
                     </li>
-
                 </ul>
+
+                
 
             </div>
 
             <div class="other">
                 <ul class="other__list">
                     <li class="other__icon other__search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <a href="">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
                     </li>
                     <li class="other__icon other__user">
-                        <i class="fa-solid fa-user"></i>
+                        <a href="">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
                     </li>
                     <li class="other__icon other__cart">
-                        <i class="fa-solid fa-cart-shopping other__cart-icon"></i>
-                        <div class="other__cart-count">0</div>
+                        <a href="">
+                            <i class="fa-solid fa-cart-shopping other__cart-icon"></i>
+                            <div class="other__cart-count">0</div>
+                        </a>
                     </li>
                 </ul>
 
@@ -189,5 +203,23 @@
         </div>
         
     </div>
+
+
+    <script>
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+        const taskbarContents = $$('.taskbar__content');
+        const lines = $$(".taskbar__list .line");
+        const taskbarContent__Icons = $$('.taskbar__content i');
+        taskbarContents.forEach((tab, index) => {
+            tab.onmouseover = function () {
+                lines[index].style.animation = 'animateForLine__In .5s ease forwards';
+            };
+            tab.onmouseout = function () {
+                lines[index].style.animation = 'animateForLine__Out .5s ease forwards';
+            };
+        });
+    </script>
+
 </body>
 </html>

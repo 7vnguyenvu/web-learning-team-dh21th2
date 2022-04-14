@@ -54,14 +54,71 @@ a:hover {
 
 
 /* -----------------------------Taskbar-------------------------- */
+
 .taskbar__list {
     display: flex;
 }
+
+.taskbar__content .line {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    /* animation: animateForLine__Out .5s ease forwards; */
+}
+/* .taskbar__content:hover .line {
+    animation: animateForLine__In .5s ease forwards;
+} */
+@keyframes animateForLine__In {
+    from {
+        width: 0;
+        left: 0;
+    }
+    to{
+        width: 100%;
+        left: 0;
+    }
+}
+@keyframes animateForLine__Out {
+    from {
+        width: 100%;
+        right: 0;
+    }
+    to{
+        width: 0;
+        right: 0;
+    }
+}
+
 .taskbar__content {
-    padding: 0 12px
+    margin: 0 12px;
+    font-size: 14px;
+    position: relative;
+    line-height: 70px;
 }
 .taskbar__content i {
-    font-size: 10px;
+    font-size: 8px;
+    /* animation: rotate__180-0 .3s forwards; */
+}
+.taskbar__content:hover i {
+    animation: rotate__0-180 .3s forwards;
+}
+@keyframes rotate__180-0 {
+    from {
+        transform: rotate(180deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+@keyframes rotate__0-180 {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
 }
 
 
