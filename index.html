@@ -356,22 +356,5 @@
         
     </div>
 
-
-    <script>
-        const $ = document.querySelector.bind(document);
-        const $$ = document.querySelectorAll.bind(document);
-        const taskbarContents = $$('.taskbar__content');
-        const lines = $$(".taskbar__list .line");
-        const taskbarContent__Icons = $$('.taskbar__content i');
-        taskbarContents.forEach((tab, index) => {
-            tab.onmouseover = function () {
-                lines[index].style.animation = 'animateForLine__In .5s ease forwards';
-            };
-            tab.onmouseout = function () {
-                lines[index].style.animation = 'animateForLine__Out .5s ease forwards';
-            };
-        });
-    </script>
-
 </body>
 </html>
