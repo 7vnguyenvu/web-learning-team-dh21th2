@@ -8,9 +8,11 @@
 :root {
     --font: 'Quicksand', sans-serif;
     --White_Color: white;
+    --bg_listProduct: #dd0303;
+    --main_color: #f1c150;
 }
 
-h1, h2 ,h3, h4, h5, h6 {
+h1, h2 ,h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
@@ -122,7 +124,7 @@ a:hover {
     font-size: 6px;
     width: 10px;
     height: 10px;
-    background-color: #f1c150;
+    background-color: var(--main_color);
     position: absolute;
     top: 0;
     right: 0;
@@ -200,6 +202,16 @@ a:hover {
 
 
 /*-----------listProduct-----------*/
+
+.listProduct {
+    background-color: var(--bg_listProduct);
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 12px;
+    margin-top: 32px;
+    overflow: hidden;
+}
+
 .listProduct .dot {
     background: rgba(255,255,0);
     border-radius: 50%;
@@ -207,7 +219,7 @@ a:hover {
     height: 8px;
     width: 8px;
     transform: scale(1);
-    animation: pulse 2s infinite;
+    animation: pulse 1.3s infinite;
   }
   
 @keyframes pulse {
@@ -220,14 +232,6 @@ a:hover {
     100% {
       box-shadow: 0 0 0 0 rgba(255,255, 0, 0);
     }
-  }
-
-.listProduct {
-    background-color: #dd0303;
-    width: 100%;
-    padding: 20px 16px;
-    border-radius: 12px;
-    margin-top: 32px;
 }
 
 .listProduct__header {
@@ -269,7 +273,7 @@ a:hover {
     height: 44px;
     display: flex;
     flex-direction: column;
-    background-color: black;    
+    background-color: rgb(0, 0, 0);    
     margin: auto;
     text-align: center;
     border-radius: 6px;
@@ -280,25 +284,136 @@ a:hover {
 }
 .listProduct__body {
     height: 354px;
-    margin-top: 16px;
-    display: flex;
-    justify-content: space-between;
+    margin: 15px 0;
+    display: inline-flex;
+    overflow: hidden;
 }
 
 
 .product {
     background-color: var(--White_Color);
-    width: 238px;
-    height: 350px;
+    width: 236px;
+    height: 100%;
+    margin-right: 15px;
+    position: relative;
 }
 
+.product__container {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product__header {
+    display: block;
+    width: 100%;
+    height: 216px;
+    position: relative;
+}
+.product__header .product__header-img {
+    padding-top: 100%;
+}
+.product__header-sale {
+    position: absolute;
+    top: 0;
+    width: 38px;
+    background-color: var(--bg_listProduct);
+    text-align: center;
+    font-size: 14px;
+    color: var(--White_Color);
+}
+.product__header-stickerFrame {
+    width: calc(100% + 16px);
+    height: 26px;
+    position: absolute;
+    left: -8px;
+    bottom: 0;
+}
+
+.product__body{
+    flex: 1;
+    background-color: var(--White_Color);
+    justify-self: flex-end;
+    width: 100%;
+    padding: 20px 15px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    transition: .3s;
+}
+.product__container:hover .product__body {
+    transform: translateY(-20px);
+}
+
+
+.product__body-publisher {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--bg_listProduct);
+}
+.product__body-publisher:hover {
+    color: var(--bg_listProduct);
+}
+.product__body-nameBook {
+    font-size: 14px;
+    text-transform: capitalize;
+    line-height: 1.2;
+    padding: 4px 0;
+
+}
+.product__body-price {
+    margin-top: auto;
+    font-size: 14px;
+}
+.product__body-price span:nth-child(1){
+    font-weight: 600;
+    margin-right: 8px;
+}
+.product__body-price span:nth-child(2){
+    font-size: 12px;
+    text-decoration-line: line-through;
+    opacity: .6;
+}
+
+.product__footer {
+    display: none;
+    z-index: 99;
+    padding: 0 10px;
+    width: 100%;
+    height: 30px;
+    transform: translateY(-25px);
+    transition: .2s;
+}
+.product__container:hover .product__footer {
+    display: block;
+}
+.product__footer a {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--White_Color);
+}
+.product__footer a p {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 30px;
+}
+.product__footer a span {
+    width: 30px;
+    background-color: var(--main_color);
+    text-align: center;
+    border-radius: 50px;
+    line-height: 30px;
+    font-size: 14px;
+    color: var(--White_Color);
+}
 
 
 
 .listProduct__footer {
     width: 322px;
     height: 44px;
-    margin-top: 16px;
     background-color: var(--White_Color);
     padding: 12px;
     position: relative;
