@@ -346,7 +346,6 @@ a:hover {
 
 .product__container {
     height: 100%;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -354,6 +353,7 @@ a:hover {
 
 .product__header {
     display: block;
+    padding: 10px;
     width: 100%;
     height: 216px;
     position: relative;
@@ -364,7 +364,7 @@ a:hover {
 }
 .product__header-sale {
     position: absolute;
-    top: 0;
+    top: 10px;
     width: 38px;
     background-color: var(--bg_listProduct);
     text-align: center;
@@ -372,27 +372,29 @@ a:hover {
     color: var(--White_Color);
 }
 .product__header-stickerFrame {
-    width: calc(100% + 16px);
+    width: calc(100% - 2px);
     height: 26px;
     position: absolute;
-    left: -8px;
-    bottom: 0;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
 }
 
 .product__body {
-    flex: 1;
+    z-index: 1;
     background-color: var(--White_Color);
     justify-self: flex-end;
     width: 100%;
-    padding: 20px 15px 10px;
+    padding: 20px 25px;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    transform: translateY(20px);
     transition: .3s;
 }
 
 .product__container:hover .product__body {
-    transform: translateY(-20px);
+    transform: translateY(-7px);
 }
 
 
@@ -415,6 +417,7 @@ a:hover {
 }
 
 .product__body-price {
+    flex: 1;
     margin-top: auto;
     font-size: 14px;
 }
@@ -431,23 +434,25 @@ a:hover {
 }
 
 .product__footer {
-    display: none;
-    z-index: 99;
-    padding: 0 10px;
+    background-color: var(--White_Color);
+    z-index: 2;
+    transform: translateY(25px);
+    display: block;
+    padding: 0 25px 15px;
     width: 100%;
-    height: 30px;
-    transform: translateY(-25px);
-    transition: .2s;
+    height: 50px;
 }
 
 .product__container:hover .product__footer {
-    display: block;
+    transform: translateY(-25px);
+
+    
 }
 
 .product__footer a {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--White_Color);
 }
 
 .product__footer a p {
