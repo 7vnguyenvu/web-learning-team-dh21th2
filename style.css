@@ -335,13 +335,17 @@ a:hover {
     overflow: hidden;
 }
 
+.listProduct__body .product {
+    width: 236px;
+}
 
 .product {
     background-color: var(--White_Color);
-    width: 236px;
     height: 100%;
     margin-right: 15px;
     position: relative;
+    overflow: hidden;
+    border: rgb(0, 0, 0, .1) 1px solid;
 }
 
 .product__container {
@@ -436,7 +440,7 @@ a:hover {
 .product__footer {
     background-color: var(--White_Color);
     z-index: 2;
-    transform: translateY(25px);
+    transform: translateY(60px);
     display: block;
     padding: 0 25px 15px;
     width: 100%;
@@ -529,7 +533,46 @@ a:hover {
 .listProduct__footer-container i {
     font-size: 12px;
 }
-/*  */
+
+/*--------- Tác phẩm nổi bật--------- */
+
+
+
+
+/* ---product--- */
+.featured__container {
+    padding: 30px 0 70px;
+}
+.featuredProduct {
+    display: flex;
+    flex-wrap: wrap;
+}
+.featuredProduct .product {
+    height: 328px;
+    width: calc(100% / 6);
+    margin-right: 0px;
+}
+.featuredProduct .product__body {
+    padding: 15px 20px;
+    transform: translateY(0);
+}
+.featuredProduct .product__container:hover .product__body {
+    transform: translateY(-30px);
+}
+.featuredProduct .product__container:hover .product__footer {
+    transform: translateY(-40px);
+}
+.featuredProduct .product__header-stickerFrame {
+    bottom: 0;
+}
+.featuredProduct .product:hover{
+    z-index: 99;
+    box-shadow: 0px 0px 10px #ddd;
+} 
+
+
+
+/* ---------------------------- */
 .post
 {
     display: flex;
